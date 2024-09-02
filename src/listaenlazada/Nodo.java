@@ -10,27 +10,46 @@ package listaenlazada;
  */
 public class Nodo {
     
-    protected int valor;
-    protected Nodo siguiente;
-    protected Nodo anterior;
+    public String valor;
+    public Nodo siguiente;
     
-    public Nodo(int x) {
-        valor = x;
-        siguiente = null;
-        anterior = null;
+    public Nodo(String v, Nodo sig) {
+        this.valor = v;
+        this.siguiente = sig;
     }
     
-    public void agregarNodoSiguiente(Nodo nodoSiguiente) {
-        siguiente = nodoSiguiente;
+    public Nodo(String v){
+        this.valor = v;
+        this.siguiente = null;
+    }
+
+    /**
+     * @return the valor
+     */
+    public String getValor() {
+        return valor;
+    }
+
+    /**
+     * @param valor the valor to set
+     */
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
+    /**
+     * @return the siguiente
+     */
+    public Nodo getSiguiente() {
+        return siguiente;
+    }
+
+    /**
+     * @param siguiente the siguiente to set
+     */
+    public void setSiguiente(Nodo siguiente) {
+        this.siguiente = siguiente;
     }
     
-    public void agregarNodoAnterior(Nodo nodoAnterior) {
-        anterior = nodoAnterior;
-    }
-    
-    public int actualizarValor(int nuevoValor) {
-        this.valor = nuevoValor;
-        return this.valor;
-    }
     
 }

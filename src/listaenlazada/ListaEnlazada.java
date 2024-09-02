@@ -10,39 +10,94 @@ package listaenlazada;
  */
 public class ListaEnlazada {
     
-    protected Nodo cabeza;
-    protected Nodo cola;
+    private Nodo inicio;
+    private Nodo fin;
     
-    public ListaEnlazada(Nodo primerNodo) {
-        this.cabeza = primerNodo;
-        this.cola = primerNodo;
+    public ListaEnlazada() {
+        this.inicio = null;
+        this.fin = null;
     }
     
-    public void insertarNodoAlFinal(Nodo nuevoNodo) {
-        cola.siguiente = nuevoNodo;
-        cola = cola.siguiente;
+    public boolean estaVacia() {
+        return this.inicio == null;
     }
     
-    public void borrarNodo(Nodo nodo) {
-        nodo.siguiente = null;   
-    }
-    
-    public Nodo buscarNodo(int valorABuscar) {
-        Nodo nodoActual = cabeza;
-        while (nodoActual != null) {
-            if (nodoActual.valor == valorABuscar){
-                return nodoActual;
-            }
-            nodoActual = nodoActual.siguiente;
+    public void agregarAlInicio(String val) {
+        if(estaVacia()){
+            inicio = new Nodo(val, inicio);
+            fin = inicio;
+        }else{
+            inicio = new Nodo(val, inicio);
+            
         }
-        return null;
     }
     
-    public void borrarNodoPorValor(int valor) {
-        Nodo nodoABorrar = buscarNodo(valor);
-        if(nodoABorrar != null) {
-            nodoABorrar.siguiente = null;
+    public void agregarAlFinal(String val) {
+        if(estaVacia()){
+            inicio = new Nodo(val);
+            fin = inicio;
+        }else{
+            fin.siguiente = new Nodo(val);
+            fin = fin.siguiente;
         }
+    }
+    
+    public String primerElemento() {
+        return inicio.valor;
+    }
+    
+    public String ultimoElemento() {
+        return fin.valor;
+    }
+    
+    public void mostrarLista() {
+        Nodo aux = this.inicio;
+        while(aux != null){
+            System.out.print("["+ aux.getValor() +"]-->");
+            aux = aux.getSiguiente();
+        }
+    }
+    
+    
+    public int cantidadNodos() {
+        Nodo aux = this.inicio;
+        int contador = 0;
+        while(aux != null){
+            contador++;
+            aux = aux.getSiguiente();
+        }
+        return contador;
+    }
+    
+    
+    
+
+    /**
+     * @return the inicio
+     */
+    public Nodo getInicio() {
+        return inicio;
+    }
+
+    /**
+     * @param inicio the inicio to set
+     */
+    public void setInicio(Nodo inicio) {
+        this.inicio = inicio;
+    }
+
+    /**
+     * @return the fin
+     */
+    public Nodo getFin() {
+        return fin;
+    }
+
+    /**
+     * @param fin the fin to set
+     */
+    public void setFin(Nodo fin) {
+        this.fin = fin;
     }
     
 }
