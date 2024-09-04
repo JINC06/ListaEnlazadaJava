@@ -64,9 +64,9 @@ public class Main {
         System.out.println("Ultimo elemento de la lista: " + listaEnlazada.ultimoElemento());*/
         
         //----------------------------------------  04/09/2024
-        /*
+        
         //TERCERA PARTE
-        ListaEnlazada listaEnlazada = new ListaEnlazada();
+        /*ListaEnlazada listaEnlazada = new ListaEnlazada();
         listaEnlazada.agregarAlFinal("Juan");
         listaEnlazada.agregarAlFinal("Ana");
         listaEnlazada.agregarAlFinal("Lupita");
@@ -81,12 +81,12 @@ public class Main {
             System.out.println("El dato se encuentra.");
         }else{
             System.out.println("El dato no se encuentra.");
-        }
-        */
+        }*/
         
-        /*
+        
+        
         //CUARTA PARTE
-        ListaEnlazada listaEnlazada = new ListaEnlazada();
+        /*ListaEnlazada listaEnlazada = new ListaEnlazada();
         listaEnlazada.agregarAlFinal("Juan");
         listaEnlazada.agregarAlFinal("Ana");
         listaEnlazada.agregarAlFinal("Lupita");
@@ -99,8 +99,8 @@ public class Main {
         System.out.println(listaEnlazada.eliminarDatoInicio());
         System.out.println("------------------------------------");
         listaEnlazada.mostrarLista();
-        System.out.println("");
-        */
+        System.out.println("");*/
+        
         
         /*
         //QUINTA PARTE
@@ -122,10 +122,9 @@ public class Main {
         System.out.println("Cantidad de elementos en la lista: " + listaEnlazada.cantidadNodos());
         */
         
-        /*
+        
         //SEXTA PARTE
         mostrarMenu();
-        */
         
     }
     
